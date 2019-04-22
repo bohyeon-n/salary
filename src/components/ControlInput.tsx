@@ -1,14 +1,14 @@
-import * as React from "react";
-import { render } from "react-dom";
+import * as React from 'react'
+import { render } from 'react-dom'
 
 interface Props {
-  Direction: any;
-  onClickIcon: Function;
+  Direction: any
+  onClickIcon: Function
 }
 
 export default class ControlInput extends React.Component<Props, {}> {
   render() {
-    const { Direction, onClickIcon } = this.props;
+    const { Direction, onClickIcon } = this.props
     return (
       <span className="control">
         <span className="up" onClick={e => onClickIcon(Direction.Up)}>
@@ -18,6 +18,6 @@ export default class ControlInput extends React.Component<Props, {}> {
           down
         </span>
       </span>
-    );
+    )
   }
 }

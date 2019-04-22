@@ -1,6 +1,6 @@
 type Dict = {
-  [key: number]: number;
-};
+  [key: number]: number
+}
 const salary: Dict = {
   1000: 771033,
   1100: 847286,
@@ -97,12 +97,55 @@ const salary: Dict = {
   10200: 6534350,
   10300: 6589213,
   10400: 6644076
-};
+}
 
-const salaryOption = Object.keys(salary).map((key, index) => ({
+const salaryOptions = Object.keys(salary).map((key, index) => ({
   key: index,
   text: key,
   value: Number(key)
-}));
+}))
 
-export { salary, salaryOption };
+const workTimeOptions: Object[] = new Array(20).fill(0).map((time, index) => ({
+  value: index + 1,
+  text: index + 1,
+  key: index + 1
+}))
+
+const convertMinutes = (min: number) => {
+  const hour = Math.floor(min / 60)
+  const minutes = min % 60
+  return `${hour !== 0 ? `${hour}시간` : ''} ${
+    minutes !== 0 ? `${minutes}분` : ''
+  }`
+}
+const lupineTimeOptions: Object[] = new Array(20).fill(0).map((time, index) => {
+  const min = (index + 1) * 30
+  return {
+    value: min,
+    text: convertMinutes(min),
+    key: min
+  }
+})
+
+const convertTimeToMoney = (
+  income: number,
+  workTime: number,
+  lupineTime: number
+) => {
+  const monthSalary = salary[income] / 21
+  const hourlyWage = monthSalary / workTime // 시간당 버는 금액
+  const lupineMoney = hourlyWage * (lupineTime / 60)
+  return {
+    lupineMoney: Math.floor(lupineMoney),
+    monthLupine: Math.floor(lupineMoney * 21),
+    yearLupine: Math.floor(lupineMoney * 21 * 12)
+  }
+}
+
+export {
+  salary,
+  salaryOptions,
+  workTimeOptions,
+  lupineTimeOptions,
+  convertTimeToMoney
+}
