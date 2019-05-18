@@ -26,7 +26,6 @@ export default class EnterInfoPage extends React.Component {
     })
   }
   changeValue = (value: number, label: string) => {
-    console.log(label)
     if (label === 'salaryValue') {
       this.setState({
         salaryValue: value
@@ -45,7 +44,6 @@ export default class EnterInfoPage extends React.Component {
   getDisplayCoinNumber = (money: number) => {
     let coinCount
     if (money < 100000) {
-      console.log(money)
       coinCount = 1
     } else {
       coinCount = Math.floor(money / 100000) * 2
