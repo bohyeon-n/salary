@@ -46,6 +46,7 @@ export default class DropdownCC extends React.Component<Props, {}> {
             value={value}
             onChange={this.handleChange}
             fluid
+            type="number"
           />
         </div>
         <ControlInput Direction={Direction} onClickIcon={this.controlInput} />
