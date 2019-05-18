@@ -1,0 +1,50 @@
+const images: any = [
+  'https://media.giphy.com/media/eewYSr7s7utOM/giphy.gif',
+  'https://media.giphy.com/media/3osxY73FaR3T4jV3fG/giphy.gif',
+  'https://media.giphy.com/media/5fBH6zoAQg9dHK2ttsc/giphy.gif',
+  'https://media.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif',
+  'https://media.giphy.com/media/p1lglAlDgojJK/giphy.gif',
+  'https://media.giphy.com/media/3d08SxjTjvfpUQAOYn/giphy.gif',
+  'https://media.giphy.com/media/1PMVNNKVIL8Ig/giphy.gif',
+  'https://media.giphy.com/media/3KC2jD2QcBOSc/giphy.gif',
+  'https://media.giphy.com/media/Km2YiI2mzRKgw/giphy.gif',
+  'https://media.giphy.com/media/3orifdO6eKr9YBdOBq/giphy.gif',
+  'https://media.giphy.com/media/pPzjpxJXa0pna/giphy.gif',
+  'https://media.giphy.com/media/SsTcO55LJDBsI/giphy.gif',
+  'https://media.giphy.com/media/YJjvTqoRFgZaM/giphy.gif',
+  'https://media.giphy.com/media/xTiTnqUxyWbsAXq7Ju/giphy.gif',
+  'https://media.giphy.com/media/l3nWgQiM13T4Ck31S/giphy.gif',
+  'https://media.giphy.com/media/2VYui7kj5C5I4/giphy.gif',
+  'https://media.giphy.com/media/67ThRZlYBvibtdF9JH/giphy.gif',
+  'https://media.giphy.com/media/132pnhRx4EM7ni/giphy.gif',
+  'https://media.giphy.com/media/WgSIUlqU9NH3ulLnZf/giphy.gif',
+  'https://media.giphy.com/media/12Eo7WogCAoj84/giphy.gif',
+  'https://media.giphy.com/media/ddEecsmCn0QZW/giphy.gif',
+  'https://media.giphy.com/media/3Jhdg8Qro5kMo/giphy.gif',
+  'https://media.giphy.com/media/xT5LMwIfp4yt0VAZTa/giphy.gif',
+  'https://media.giphy.com/media/iNx9pCiBimBAdOb0oa/giphy.gif',
+  'https://media.giphy.com/media/d3DwdybCnRmRa/giphy.gif',
+  'https://media.giphy.com/media/bIfHGsXKuoi6A/giphy.gif',
+  'https://media.giphy.com/media/nIM0pmYCPZ11S/giphy.gif',
+  'https://media.giphy.com/media/LdOyjZ7io5Msw/giphy.gif',
+  'https://media.giphy.com/media/uCLrqp14d6JH2/giphy.gif',
+  'https://media.giphy.com/media/5QMOICVmXremPSa0k7/giphy.gif',
+  'https://media.giphy.com/media/l2JIkmODdP4AgvCqk/giphy.gif',
+  'https://media.giphy.com/media/la6Ne7z15BXs4/giphy.gif',
+  'https://media.giphy.com/media/fNvXkjC50ywBW/giphy.gif',
+  'https://media.giphy.com/media/109qivmw8Q6K52/giphy.gif',
+  'https://media.giphy.com/media/7HPgM7IltO4QU/giphy.gif',
+  'https://media.giphy.com/media/xTiTnB3lOC4vwJAgq4/giphy.gif',
+  'https://media.giphy.com/media/R6f2XTDc3RlL2/giphy.gif',
+  'https://media.giphy.com/media/88i684BwgEqsDAVGn0/giphy.gif',
+  'https://media.giphy.com/media/cLLgfNJiKppgA/giphy.gif',
+  'https://media.giphy.com/media/t98sVFES6fjE8OUDzO/giphy.gif',
+  'https://media.giphy.com/media/3o6MbqNPaatT8nnEmk/giphy.gif',
+  'https://media.giphy.com/media/3ohjV1wV5q38uFVjG0/giphy.gif'
+]
+
+const getRandomImage = () => {
+  const randomNumber = Math.floor(Math.random() * images.length)
+  return images[randomNumber] ? images[randomNumber] : images[0]
+}
+export { images, getRandomImage }
