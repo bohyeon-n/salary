@@ -95,7 +95,7 @@ export default class EnterInfoPage extends React.Component {
             시간 일한다.
           </div>
         </div>
-        <div className="info__item">
+        <div className="info__item time">
           <div className="line--1">나는 하루</div>
           <div className="line--2">
             <DropdownCC
