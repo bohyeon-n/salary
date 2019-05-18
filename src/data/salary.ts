@@ -127,7 +127,7 @@ const convertMinutes = (min: number) => {
     minutes !== 0 ? `${minutes}분` : ''
   }`
 }
-const lupineTimeOptions: Object[] = new Array(20).fill(0).map((time, index) => {
+const lupinTimeOptions: Object[] = new Array(20).fill(0).map((time, index) => {
   const min = (index + 1) * 30
   return {
     value: min,
@@ -139,15 +139,15 @@ const lupineTimeOptions: Object[] = new Array(20).fill(0).map((time, index) => {
 const convertTimeToMoney = (
   income: number,
   workTime: number,
-  lupineTime: number
+  lupinTime: number
 ) => {
   const dayWage = salary[income] / 22
   const hourlyWage = dayWage / workTime // 시간당 버는 금액
-  const lupineMoney = hourlyWage * (lupineTime / 60)
+  const lupinMoney = hourlyWage * (lupinTime / 60)
   return {
-    lupineMoney: Math.floor(lupineMoney),
-    monthLupine: Math.floor(lupineMoney * 22),
-    yearLupine: Math.floor(lupineMoney * 22 * 12)
+    lupinMoney: Math.floor(lupinMoney),
+    monthlupin: Math.floor(lupinMoney * 22),
+    yearlupin: Math.floor(lupinMoney * 22 * 12)
   }
 }
 
@@ -155,6 +155,6 @@ export {
   salary,
   salaryOptions,
   workTimeOptions,
-  lupineTimeOptions,
+  lupinTimeOptions,
   convertTimeToMoney
 }

@@ -3,7 +3,7 @@ import {
   salary,
   salaryOptions,
   workTimeOptions,
-  lupineTimeOptions,
+  lupinTimeOptions,
   convertTimeToMoney
 } from './../data/salary'
 
@@ -15,7 +15,7 @@ export default class EnterInfoPage extends React.Component {
   state = {
     salaryValue: salaryOptions[20].value,
     workTimeValue: 8,
-    lupineTimeValue: 60,
+    lupinTimeValue: 60,
     img: ''
   }
 
@@ -34,9 +34,9 @@ export default class EnterInfoPage extends React.Component {
       this.setState({
         workTimeValue: value
       })
-    } else if (label === 'lupineTimeValue') {
+    } else if (label === 'lupinTimeValue') {
       this.setState({
-        lupineTimeValue: value
+        lupinTimeValue: value
       })
     }
   }
@@ -52,15 +52,15 @@ export default class EnterInfoPage extends React.Component {
   }
 
   render() {
-    const { salaryValue, workTimeValue, lupineTimeValue } = this.state
-    const lupines = convertTimeToMoney(
+    const { salaryValue, workTimeValue, lupinTimeValue } = this.state
+    const lupins = convertTimeToMoney(
       salaryValue,
       workTimeValue,
-      lupineTimeValue
+      lupinTimeValue
     )
     return (
       <div className="info">
-        {/* {new Array(this.getDisplayCoinNumber(lupines.monthLupine))
+        {/* {new Array(this.getDisplayCoinNumber(lupins.monthlupin))
           .fill('')
           .map((c: any, index: number) => (
             <div key={index} className={`coin coin-${index}`}>
@@ -99,10 +99,10 @@ export default class EnterInfoPage extends React.Component {
           <div className="line--1">나는 하루</div>
           <div className="line--2">
             <DropdownCC
-              options={lupineTimeOptions}
-              value={lupineTimeValue}
+              options={lupinTimeOptions}
+              value={lupinTimeValue}
               changeState={this.changeValue}
-              label="lupineTimeValue"
+              label="lupinTimeValue"
               unit={30}
               width={130}
             />
@@ -117,7 +117,7 @@ export default class EnterInfoPage extends React.Component {
           <div className="result month">
             나는 한달
             <div className="money">
-              {lupines.monthLupine.toLocaleString()}
+              {lupins.monthlupin.toLocaleString()}
               <span className="unit">원</span>
             </div>
             루팡한다.
