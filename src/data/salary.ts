@@ -127,6 +127,20 @@ const convertMinutes = (min: number) => {
     minutes !== 0 ? `${minutes}분` : ''
   }`
 }
+
+const getLupinTimeOptions: Function = (limitTime: number) => {
+  const lupinTimeOptions: Object[] = new Array(Math.ceil(limitTime * 2))
+    .fill(0)
+    .map((time, index) => {
+      const min = (index + 1) * 30
+      return {
+        value: min,
+        text: convertMinutes(min),
+        key: min
+      }
+    })
+  return lupinTimeOptions
+}
 const lupinTimeOptions: Object[] = new Array(20).fill(0).map((time, index) => {
   const min = (index + 1) * 30
   return {
@@ -156,5 +170,6 @@ export {
   salaryOptions,
   workTimeOptions,
   lupinTimeOptions,
-  convertTimeToMoney
+  convertTimeToMoney,
+  getLupinTimeOptions
 }

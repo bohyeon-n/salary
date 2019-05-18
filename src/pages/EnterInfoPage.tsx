@@ -4,7 +4,8 @@ import {
   salaryOptions,
   workTimeOptions,
   lupinTimeOptions,
-  convertTimeToMoney
+  convertTimeToMoney,
+  getLupinTimeOptions
 } from './../data/salary'
 
 import DropdownCC from './../containers/DropdownCC'
@@ -99,12 +100,12 @@ export default class EnterInfoPage extends React.Component {
           <div className="line--1">나는 하루</div>
           <div className="line--2">
             <DropdownCC
-              options={lupinTimeOptions}
+              options={getLupinTimeOptions(workTimeValue)}
               value={lupinTimeValue}
               changeState={this.changeValue}
               label="lupinTimeValue"
               unit={30}
-              width={130}
+              width={140}
             />
             월루한다.
           </div>
