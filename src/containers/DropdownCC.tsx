@@ -43,7 +43,7 @@ export default class DropdownCC extends React.Component<Props, {}> {
             search
             compact
             options={options}
-            value={value}
+            value={Number(value)}
             onChange={this.handleChange}
             fluid
             type="number"
